@@ -77,4 +77,7 @@ footer {
     margin-bottom: 30px;
 }
 
-/*  */
+/* About page */
+#about_text{
+    padding: 50px 150px 50px 150px;
+}
