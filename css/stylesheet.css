@@ -274,7 +274,7 @@ textarea {
     width: 90%;
 }
 
-#message-area {
+#message-area, #send {
     display: none;
 }
 
@@ -378,9 +378,10 @@ textarea {
     width: 90%;
 }
 
-#message-area {
+#message-area, #send {
     display: none;
 }
+
 
 
 /* Room page */

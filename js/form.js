@@ -30,6 +30,7 @@ function addMessageBox() {
     let labelTxt = "Ecris ici :";
 
     messageBox.style.display = "block";
+    document.getElementById("send").style.display = "block";
 
     if(messageTypeRadio[0].checked) {
         labelTxt = "Donnes nous tes disponibilés et le nombre de gens avec qui tu voudrais participer :"
@@ -42,7 +43,12 @@ function addMessageBox() {
     else if(messageTypeRadio[2].checked) {
         labelTxt = "Dis nous tout :"
     }
-    messageBox.textContent = labelTxt;
-    
+    messageBox.firstElementChild.textContent = labelTxt;
+}
 
+function sendConctact() {
+    let messInfo = document.getElementById("message-info");
+    messInfo.disabled = "disabled";
+    window.alert("Your message has been sent. Thank you !");
+    window.location.href = "home.html";
 }
