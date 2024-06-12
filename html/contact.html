@@ -2,29 +2,86 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Groupe Escape | Contact-nous</title>
+        <title>Groupe Escape | Contacte-nous</title>
         <link rel="icon" href="../img/icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="../css/stylesheet.css">
+        <script src="../js/form.js"></script>
     </head>
-    <header>
-        <a href="home.html"><img src="../img/groupe_escape_logo.png" alt="logo de l'association"></a>
-        <nav>
-            <a href="home.html" >Accueil</a>
-            <a href="room_page.html">La salle</a>
-            <a href="contact.html">Nous contacter</a>
-        </nav>
-    </header>
     <body>
+        <header>
+            <a href="home.html"><img src="../img/groupe_escape_logo.png" alt="logo de l'association"></a>
+            <nav>
+                <a href="home.html" >Accueil</a>
+                <a href="room_page.html">La salle</a>
+                <a href="contact.html">Nous contacter</a>
+            </nav>
+        </header>
+        <main>
+            <form method="post" action="#" id="QuizId" onsubmit="return false">
+                <h1> Nous Contacter</h1>
+                <h3>Remplis ce formulaire pour prendre contact avec nous !</h3>
+                
+                <fieldset id="personnal-info">
+                    <legend>Qui es-tu ?</legend>
+                    <label class="required">
+                        Nom :
+                        <input type="text" id="nom-reponse" placeholder="Ton nom de famille" required/>
+                    </label>
+                    <label class="required">
+                        Prénom :
+                        <input type="text" id="prenom-reponse" placeholder="Ton prénom" required"/>
+                    </label>
+                    <label class="radio-lst">
+                        Genre :
+                        <label><input type="radio" name="genre" value="H"/>Homme</label>
+                        <label><input type="radio" name="genre" value="F"/>Femme</label>
+                        <label><input type="radio" name="genre" value="X"/>Non Binaire</label>
+                        <label><input type="radio" name="genre" value="LOL"/>Mystère 🥷</label>
+                    </label>
+                    <label class="required">
+                        Tu es :
+                        <select id="statut-reponse" required>
+                            <option selected disabled>Choisis ton statut</option>
+                            <optgroup label="Efrei">
+                                <option value="efrei-std">Elève de l'EFREI</option>
+                                <option value="efrei-adm">Professeur ou membre de l'administration</option>
+                            </optgroup>
+                            <optgroup label="Extérieur">
+                                <option value="ext-std">Etudiant extérieur</option>
+                                <option value="lycee">Elève de lycée</option>
+                                <option value="parent">Parent d'élève</option>
+                                <option value="autre">Autre</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                    <button type="submit" id="continue" onclick="continueConctact()">Continuer →</button>
+                </fieldset>
+                <fieldset id="message-info">
+                    <legend>Que veux-tu ?</legend>
+                    <label class="radio-lst">
+                        Pourquoi veux-tu nous contacter ? : 
+                        <label><input type="radio" name="raison-contact" value="la-salle"/>Je veux prendre rendez-vous pour faire l'escape game</label>
+                        <label><input type="radio" name="raison-contact" value="question"/>J'ai une question sur l'association ou la salle</label>
+                        <label><input type="radio" name="raison-contact" value="autre"/>J'ai une autre remarque à faire</label>
+                    </label>
+                    <div id="message-area">
+                        <textarea spellcheck="true" placeholder="Ecris ici"></textarea>
+                        <button type="submit" id="send" onclick="sendConctact()">Submit</button>
+                    </div>
+                    
+                </fieldset>
 
+            </form>
+        </main>
+        <footer>
+            <span>Passe voir nos résaux</span>
+            <div class="reseaux">
+                <a title="Rejoins notre server Discord" href="https://discord.gg/e2XekztmtD" target=”_blank”><img src="../img/discord.png" alt="discord logo"></a>
+                <a title="Suis-nous sur Instagram" href="https://www.instagram.com/escapefromefrei/" target=”_blank”><img src="../img/instagram.png" alt="instagram logo"></a>
+                <a title="On est aussi sur Facebook" href="https://www.facebook.com/EscapeFromEfrei/?locale=fr_FR" target=”_blank”><img src="../img/facebook.png" alt="facebook logo"></a>
+            </div>
+                <a href="about.html">A propos de nous</a>
+        </footer>
     </body>
-    <footer>
-        <span>Passe voir nos résaux</span>
-        <div class="reseaux">
-            <a title="Rejoins notre server Discord" href="https://discord.gg/e2XekztmtD" target=”_blank”><img src="../img/discord.png" alt="discord logo"></a>
-            <a title="Suis-nous sur Instagram" href="https://www.instagram.com/escapefromefrei/" target=”_blank”><img src="../img/instagram.png" alt="instagram logo"></a>
-            <a title="On est aussi sur Facebook" href="https://www.facebook.com/EscapeFromEfrei/?locale=fr_FR" target=”_blank”><img src="../img/facebook.png" alt="facebook logo"></a>
-        </div>
-            <a href="about.html">A propos de nous</a>
-    </footer>
 </html>

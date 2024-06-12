@@ -83,6 +83,7 @@ footer {
         text-decoration: none;
 
         &:hover {
+            color: ghostwhite;
             text-decoration-line:underline;
         }
     } 
@@ -172,6 +173,110 @@ div.corps-text {
     min-width: 300px;
     flex: 1 1 300px;
 }
+
+/* Form page */
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+    & h1, & h3 {
+        line-height: 0px;
+    }
+}
+
+fieldset {
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    padding: 20px;
+    margin: 10px 0px;
+
+    border-radius: 10px;
+    border-color: #22376a;
+}
+
+legend {
+    color: #22376a;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+
+input[type=text], input[type=email], select, textarea {
+    font-family: 'Montserrat', sans-serif;
+    border: solid 1px #22376a;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 2px;
+
+    width: 50%;
+    min-width: fit-content;
+    &:focus {
+        outline:none !important;
+        box-shadow: 0 0 5px #22376a;
+    }
+}
+
+input[type=radio] {
+    accent-color: #2B81B2;
+}
+
+label {
+    font-weight: 500;
+    & label {
+        font-weight: 400;
+    }
+}
+
+
+fieldset button {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #22376a;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    font-weight: 700;
+    color: ghostwhite;
+
+    &:hover {
+        box-shadow: 0 0 5px #22376a;
+        cursor: pointer;
+    }
+}
+
+.required::after{
+    content:" *";
+    color: #DB191D;
+ }
+
+.radio-lst {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3px;
+}
+
+#message-info {
+    display: none;
+}
+
+textarea {
+    margin: 5px;
+    resize: vertical;
+    width: 90%;
+}
+
+#message-area {
+    display: none;
+}
+
 
 /* About page */
 #about_text{

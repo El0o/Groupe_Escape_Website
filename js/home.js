@@ -26,8 +26,6 @@ window.onload = () => {
 
 }
 
-// Slider
-
 function slideNext() {
     cpt++;
     let decal = -slideWidth * cpt;
@@ -67,3 +65,5 @@ function stopTimerSlider(){
 function startTimerSlider(){
     timerSlider = setInterval(slideNext, 5000);
 }
+
+// Form
