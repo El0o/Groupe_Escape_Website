@@ -1,43 +1,50 @@
-/* Fonts (plus tard)*/
+/* Fonts (plus tard) */
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* Core styles */
 html, body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', 'Lucida Sans', sans-serif;
     width: 100%;
     height: 100%;
     margin: 0 !important;
     padding: 0 !important;
+    background-color: ghostwhite;
+}
+
+img {
+    object-fit: contain;
+    object-position: center;
 }
 
 header {
+
+    background-color: ghostwhite;
     display: flex;
     flex-wrap: nowrap;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
-    background-color: ghostwhite;
-    border: solid ghostwhite 3px;
-    padding: 0px, 10px;
+    gap: 20px;
+    padding: 10px 50px;
     
     & img {
-        max-width: 200px;
-        margin: 10px;
+        max-width: 150px;
     }
 }
 
 nav {
-    align-self: end;
     flex-wrap: nowrap;
+    font-weight: 600;
     & a {
         color: #22376a;
         text-decoration: none;
         font-size: x-large;
         margin: 10px;
+        transition: 0.2s;
         
         &:hover {
             border-bottom: solid #22376a 3px;
-            transition: 0.2s;
         }
     }
 }
@@ -54,7 +61,7 @@ footer {
     & span {
         color: ghostwhite;
         font-weight: bold;
-        font-size: large;
+        font-size: 1.5em;
     }
     & img {
         width: 100px;
@@ -72,9 +79,78 @@ footer {
     } 
 }
 
-.reseaux {
+div.reseaux {
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-/*  */
+/* Slider */
+
+.slider {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-imgs{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.slider>img {
+    
+    flex: 1 0 100%;
+    width: 100%;
+    position: relative;
+}
+
+.arrow {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0);
+    font-size: 5em;
+    cursor: pointer;
+    transition: 0.2s;
+    
+    &.left {
+        left: 5px;
+    }
+
+    &.right {
+        right: 5px;
+    }
+
+    &:hover {
+        
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+
+/* Home page */
+
+section.corps {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    gap: 50px;
+
+    & img, & .slider {
+       height: 450px;
+       width: 600px;
+    }
+}
+
+div.corps-text {
+    text-align: justify;
+    max-width: 550px;
+    min-width: 300px;
+    flex: 1 1 300px;
+}
