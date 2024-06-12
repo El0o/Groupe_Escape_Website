@@ -154,3 +154,8 @@ div.corps-text {
     min-width: 300px;
     flex: 1 1 300px;
 }
+
+/* About page */
+#about_text{
+    padding: 50px 150px 50px 150px;
+}
