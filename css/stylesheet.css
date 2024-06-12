@@ -11,11 +11,20 @@ html, body {
     margin: 0 !important;
     padding: 0 !important;
     background-color: ghostwhite;
+    color: #161C20;
 }
 
 img {
     object-fit: contain;
     object-position: center;
+}
+
+a {
+    color: #2B81B2;
+
+    &:hover {
+        color: #DB191D;
+    }
 }
 
 header {
@@ -43,6 +52,7 @@ nav {
         transition: 0.2s;
         
         &:hover {
+            color: #22376a;
             border-bottom: solid #22376a 3px;
         }
     }
@@ -125,13 +135,22 @@ div.reseaux {
     }
 
     &:hover {
-        
         color: rgba(255, 255, 255, 0.5);
     }
 }
 
 
 /* Home page */
+
+.home-banderole {
+    text-align: center;
+    justify-content: center;
+    background-color: #22376a;
+    color: white;
+    padding: 10px 
+    
+    
+}
 
 section.corps {
     display: flex;

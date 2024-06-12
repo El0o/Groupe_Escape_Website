@@ -1,4 +1,4 @@
-var timer, slider, sliderImgs, slideWidth, cpt;
+var timerSlider, slider, sliderImgs, slideWidth, cpt;
 
 
 window.onload = () => {
@@ -19,10 +19,10 @@ window.onload = () => {
     next.addEventListener("click", slideNext);
     prev.addEventListener("click", slidePrevious);
 
-    timer = setInterval(slideNext, 5000);
+    timerSlider = setInterval(slideNext, 5000);
 
-    slider.addEventListener("mouseover", stopTimer);
-    slider.addEventListener("mouseout", startTimer);
+    slider.addEventListener("mouseover", stopTimerSlider);
+    slider.addEventListener("mouseout", startTimerSlider);
 
 }
 
@@ -60,10 +60,10 @@ function slidePrevious() {
     slider.style.transform = "translateX(" + decal + "px)";
 }
 
-function stopTimer(){
-    clearInterval(timer);
+function stopTimerSlider(){
+    clearInterval(timerSlider);
 }
 
-function startTimer(){
-    timer = setInterval(slideNext, 5000);
+function startTimerSlider(){
+    timerSlider = setInterval(slideNext, 5000);
 }
