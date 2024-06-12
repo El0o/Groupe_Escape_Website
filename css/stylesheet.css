@@ -13,6 +13,7 @@ html, body {
     background-color: ghostwhite;
 }
 
+
 img {
     object-fit: contain;
     object-position: center;
@@ -133,6 +134,7 @@ div.reseaux {
 
 /* Home page */
 
+
 section.corps {
     display: flex;
     flex-flow: row wrap;
@@ -161,17 +163,19 @@ div.corps-text {
 
 
 #photo-d-accueil {
+    width: 100%;
     margin: 0 !important;
     position: relative;
 
     & > img{
+        object-fit: cover;
         width: 100%;
-        height: 500px;
+        height: 550px;
     }
 
     & h1 {
         margin: 0 !important;
-        font-family: "Julius Sans One", Cambria, Cochin, serif;
+        font-family: "Saira Stencil One", serif;
         color: white;
         font-weight: bold;
         font-size: 55px;
