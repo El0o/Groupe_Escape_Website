@@ -159,3 +159,26 @@ div.corps-text {
 #about_text{
     padding: 50px 150px 50px 150px;
 }
+
+
+#photo-d-accueil {
+    margin: 0 !important;
+    position: relative;
+
+    & > img{
+        width: 100%;
+        height: 500px;
+    }
+
+    & h1 {
+        margin: 0 !important;
+        font-family: "Julius Sans One", Cambria, Cochin, serif;
+        color: white;
+        font-weight: bold;
+        font-size: 55px;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+    }
+
+}
