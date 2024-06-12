@@ -1,6 +1,6 @@
 /* Fonts (plus tard) */
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* Core styles */
@@ -19,7 +19,6 @@ img {
 }
 
 header {
-
     background-color: ghostwhite;
     display: flex;
     flex-wrap: nowrap;
